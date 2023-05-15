@@ -1,0 +1,18 @@
+Actualiza tu sistema Arch:
+
+sudo pacman -Syu
+
+Una vez terminada la actualización :
+
+du -sh /var/cache/pacman/pkg
+Verifica el tamaño que ocupa la caché de pacman en el sistema:
+
+sudo pacman -Sc ; sudo paccache -r ; sudo pacman -Scc
+Luego ejecuta un comando que se encargue de limpiar esa caché y comprueba que tanto espacio se liberó después de eso:
+
+du -sh /var/cache/pacman/pkg
+
+Verificar antivirus funciona
+
+wget https://secure.eicar.org/eicar.com.txt
+clamscan -r --remove .
